@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box; /*border-box hace que padding y border se sumen al ancho total*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /*define tipografía principal*/
+}
+
+/* Estilos del cuerpo del documento*/
+body {
+  margin: 0; /*elimina márgenes por defecto*/
+  min-height: 100vh; /*asegura que el body ocupe toda la altura de la ventana*/
+  background-color: #aec6cf;
+}
+
+/* Contenedor principal del header */
+.header {
+  position: relative;        /* Permite posicionar elementos dentro */
+  display: grid;             /* Se usa grid para centrar el contenido */
+  place-items: center;       /* Centra vertical y horizontalmente */
+  overflow: hidden;          /* Oculta contenido que desborde */
+}
+
+/* Imagen de fondo del header */
+.header-img {
+  grid-area: 1 / 1 / 2 / 2;  /* Ocupa primera fila y columna del grid */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Ajusta la imagen cubriendo el área sin deformar */
+  filter: brightness(80%);   /* Oscurece un poco la imagen para resaltar el texto */
+  display: block;
+}
+
+/* Texto principal sobre la imagen */
+.header-text {
+  position: absolute;        /* Se coloca sobre la imagen */
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  z-index: 1;                /* Asegura que esté por encima de la imagen */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra para legibilidad */
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+/* Contenedor del nav con grid */
+nav {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas de igual ancho */
+  justify-items: center;                 /* Centra cada enlace horizontalmente */
+  background-color: #80cee1;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Estilo de los enlaces */
+nav a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;  /* Transición suave para hover */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Icono de usuario dentro del nav */
+nav a img {
+  width: 20px;
+  height: 20px;
+}
+
+.main {
+  padding: 40px 20px;
+  background-color: #aec6cf;
+}
+
+/* Párrafo de introducción centrado y ancho limitado */
+.main p {
+  width: 80%;
+  margin: auto;
+  text-align: center; 
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+/*  CAROUSEL (CARRUSEL DE IMÁGENES) */
+
+/* Contenedor principal del carrusel */
+.carousel {
+  margin: auto;
+  position: rela
+}
+
+/* Contenedor de las slides, estilo flex para deslizamiento */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease; /* Transición suave al moverse */
+}
+
+/* Cada diapositiva individual */
+.slide {
+  min-width: 100%;           /* Ocupa todo el ancho del carrusel */
+  position: relative;
+  height: 100%;
+}
+
+/* Imagen dentro de la diapositiva */
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+/* Texto de caption debajo de cada imagen */
+.caption {
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+}
+
+.caption h2 {
+  margin: auto;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.caption p {
+  margin: auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Botones de control del carrusel */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.controls button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* (PIE DE PÁGINA) */
+
+footer {
+  height: 100px;
+  background-color: #80cee1;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 45px 0;
+  font-size: 14px;
+}
+
+/*  MEDIA QUERIES (RESPONSIVE) */
+
+@media (max-width: 600px) {
+
+  /* Reducir tamaño del texto principal en header */
+  .header-text {
+    font-size: 32px;
+  }
+
+  /* Reducir tamaño de título y párrafo en captions */
+  .caption h2 {
+    font-size: 1.2rem;
+  }
+
+  .caption p {
+    font-size: 0.9rem;
+  }
+
+  /* Botones del carrusel más pequeños */
+  .controls button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajuste del nav a 4 columnas en móviles */
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    padding: 10px 0;
+  }
+}
