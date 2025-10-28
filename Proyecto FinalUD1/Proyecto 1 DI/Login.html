@@ -1,0 +1,73 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Login.css">
+</head>
+<body>
+
+  <!--HEADER-->
+  <!-- Contenedor principal del header con imagen de fondo y texto superpuesto -->
+  <div class="header">
+    <!-- Imagen de fondo del header que ocupa todo el contenedor -->
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <!-- Texto del header colocado encima de la imagen, centrado y con sombra para mejor legibilidad -->
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!--FORMULARIO LOGIN-->
+  <!-- Contenedor del formulario, centrado en la página -->
+  <div class="form-container">
+    <form>
+      <!-- Título del formulario -->
+      <h1>LOGIN</h1>
+
+      <!-- Icono de usuario, decorativo, centrado encima del formulario -->
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuario" class="user-icon">
+
+      <!-- Fila con nombre y apellidos lado a lado -->
+      <div class="form-row">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+      </div>
+
+      <!-- Campo de correo electrónico -->
+      <div>
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+
+      <!-- Campo de contraseña -->
+      <div>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <!-- Fila de botones: inicio de sesión y cancelar -->
+      <div class="button-row">
+        <!-- Botón de inicio de sesión, enlaza a la página de inicio  
+        para que sea mas rapido si no quieres meter datos al pulsar el boton de iniciar 
+        sesion directamente se 
+        abre el html de Inicio para que sea mas dinamico a la hora de verlo todo-->
+        <a href="Inicio.html" class="btn-login">Iniciar sesión</a>
+        <!-- Botón para limpiar todos los campos del formulario -->
+        <button type="reset" class="btn-cancel">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <!--FOOTER-->
+  <!-- Pie de página simple, centrado, con copyright -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+</body>
+</html>

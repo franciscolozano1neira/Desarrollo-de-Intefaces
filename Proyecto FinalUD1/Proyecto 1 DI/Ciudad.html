@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+ <div class="main-image-container">
+  <img src="Img/paisajeCiudad.jpg"
+       alt="Ciudad"
+       class="main-image">
+  <div class="destino-nombre">Japón</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+   <p>
+    Bienvenido a <strong>Japón</strong>, un país donde la tradición milenaria se fusiona con la tecnología más avanzada. Sus ciudades vibrantes ofrecen una experiencia única llena de cultura, gastronomía, innovación y hospitalidad.
+  </p>
+<br>
+  <p>
+    <strong>Qué ver:</strong> pasea por los templos antiguos de Kioto, los jardines zen y los rascacielos futuristas de Tokio. Admira las luces de Shibuya, los santuarios sintoístas y los parques llenos de cerezos en flor.
+  </p>
+<br>
+  <p>
+    <strong>Qué hacer:</strong> súbete al tren bala, disfruta de un baño en un onsen tradicional, participa en una ceremonia del té o visita los modernos distritos de compras como Akihabara y Shinjuku. La mezcla entre calma y modernidad te sorprenderá.
+  </p>
+<br>
+  <p>
+    <strong>Qué visitar:</strong> explora el Monte Fuji, el Palacio Imperial, los museos de arte contemporáneo y los mercados callejeros donde se puede probar sushi fresco, ramen o dulces japoneses. Cada rincón es una experiencia cultural.
+  </p>
+<br>
+  <p>
+    <strong>Actividades únicas:</strong> duerme en un ryokan tradicional, asiste a un espectáculo de sumo o disfruta del hanami —la observación de los cerezos en flor—. Japón te envuelve en una atmósfera única entre pasado y futuro.
+  </p>
+</div> </div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

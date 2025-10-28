@@ -1,0 +1,271 @@
+/* Configuración base para asegurar coherencia y eliminar márgenes predeterminados. */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: #AEC6CF;
+}
+
+/* Se estructura el documento con Grid para definir áreas principales (header, nav, main, footer). */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main-image"
+    "descripcion"
+    "boton"
+    "."
+    "footer";
+  grid-template-rows: auto auto auto auto auto 1fr auto;
+}
+
+/* HEADER */
+/* Cabecera con imagen superior y texto centrado sobre ella. */
+.header {
+  grid-area: header;
+  position: relative;
+  width: 100%;
+}
+
+.header-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* Mantiene proporciones sin deformar */
+  filter: brightness(80%);
+}
+
+.header-text {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1.5s;
+  cursor: pointer;
+}
+
+.header-text:hover {
+  transform: translate(-50%, -50%) rotateY(360deg); /* Efecto rotación 3D decorativo */
+}
+
+/* NAVEGACIÓN */
+/* Barra superior para moverse por la página. */
+nav {
+  grid-area: nav;
+  background-color: lightskyblue;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-top: -10px;
+}
+
+/* Contenedor interno de los enlaces. Se usa grid para repartirlos proporcionalmente. */
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-container a:hover {
+  text-decoration: underline;
+}
+
+.usuario-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+/* IMAGEN PRINCIPAL DEL DESTINO */
+/* Contenedor de imagen principal con nombre superpuesto */
+.main-image-container {
+  position: relative; /* Permite que el nombre se posicione encima de la imagen */
+  grid-area: main-image;
+  width: 95%;
+  max-width: 1700px;
+  margin: 60px auto 20px auto;
+}
+
+/* Imagen destacada del producto o destino */
+.main-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+/* Efecto de movimiento suave para dar dinamismo */
+.main-image:hover {
+  animation: mecer 1.5s ease-in-out infinite;
+  transform: scale(1.02);
+}
+
+/* Animación tipo balanceo (usada para sensación de movimiento sutil). */
+@keyframes mecer {
+  0% { transform: scale(1.02) rotate(0deg) translateX(0); }
+  25% { transform: scale(1.02) rotate(0.5deg) translateX(3px); }
+  50% { transform: scale(1.02) rotate(0deg) translateX(0); }
+  75% { transform: scale(1.02) rotate(-0.5deg) translateX(-3px); }
+  100% { transform: scale(1.02) rotate(0deg) translateX(0); }
+}
+
+/* Nombre del destino sobre la imagen */
+.destino-nombre {
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  z-index: 10;
+  pointer-events: none; /* Para que no bloquee clicks sobre la imagen o botones */
+  transition: transform 1.5s;
+  text-align: center;
+}
+
+.destino-nombre:hover {
+  transform: translate(-50%, -50%) rotateY(360deg);
+}
+
+/* DESCRIPCIÓN DEL PRODUCTO*/
+/* Sección de texto explicativo que acompaña a la imagen. */
+.descripcion-sitio {
+  grid-area: descripcion;
+  width: 95%;
+  max-width: 1700px;
+  margin: 40px auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: justify;
+  color: #333;
+  padding: 20px 0;
+}
+
+/* BOTÓN DE CARRITO*/
+/* Se usa flex aquí porque solo hay un elemento que debe alinearse a la derecha. */
+.boton-contenedor {
+  grid-area: boton;
+  display: flex; /* Flex es más práctico que grid cuando se alinea un único elemento */
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 80px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Botón circular para añadir al carrito */
+.add-to-cart-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 11;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Mensaje emergente al añadir un producto al carrito */
+.mensaje-carrito {
+  position: absolute;
+  top: 80px;
+  right: 70px;
+  background-color: #e6ffe6;
+  color: #28a745;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 12;
+}
+
+/* Pie de página con estilo uniforme en toda la web */
+footer {
+  grid-area: footer;
+  background-color: lightskyblue;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* DISEÑO RESPONSIVO*/
+/* Ajustes para mejorar la experiencia en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 32px;
+  }
+
+  .main-image-container {
+    width: 95%;
+  }
+
+  .main-image {
+    height: 250px;
+    margin: 40px auto 15px auto;
+  }
+
+  .destino-nombre {
+    font-size: 32px;
+  }
+
+  .descripcion-sitio {
+    width: 95%;
+    font-size: 1em;
+    margin: 30px auto;
+  }
+
+  .nav-container {
+    grid-template-columns: repeat(3, 1fr) auto; /* Menos columnas en móvil */
+    gap: 10px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .boton-contenedor {
+    padding: 20px 20px;
+    justify-content: center; /* Centra el botón en pantallas pequeñas */
+  }
+}

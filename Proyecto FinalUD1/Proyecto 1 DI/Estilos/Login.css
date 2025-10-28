@@ -1,0 +1,163 @@
+/* Se definen propiedades globales para mantener coherencia visual en todo el documento */
+* {
+  box-sizing: border-box; /* Controla el cálculo del tamaño total de los elementos */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid; /* Se usa grid para organizar las secciones principales del layout */
+  grid-template-rows: 30vh auto 70px; /* Header, contenido y footer */
+  background-color: #AEC6CF;
+}
+
+/* HEADER */
+/* Cabecera con imagen de fondo y texto superpuesto */
+.header {
+  position: relative;
+  display: grid; /* Se usa grid para centrar el texto fácilmente sobre la imagen */
+  place-items: center;
+  overflow: hidden;
+}
+
+.header-img {
+  grid-area: 1 / 1 / 2 / 2; /* La imagen ocupa toda la celda de la cuadrícula */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor sin deformarla */
+  filter: brightness(80%);
+  display: block;
+}
+
+.header-text {
+  position: absolute; /* Permite superponer el texto sobre la imagen */
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  font-weight: bold;
+  z-index: 1; /* Garantiza que el texto esté encima de la imagen */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* FORMULARIO PRINCIPAL*/
+/* Contenedor que centra el formulario en la página */
+.form-container {
+  display: grid; /* Se usa grid para centrar el formulario vertical y horizontalmente */
+  place-items: center;
+  padding: 40px 0;
+}
+
+/* Sección del formulario como tal */
+form {
+  display: grid; /* Grid permite organizar los campos en filas y columnas fácilmente */
+  grid-template-columns: 1fr; /* Por defecto, una sola columna */
+  gap: 15px; /* Espaciado entre los campos */
+  background-color: #80cee1;
+  padding: 35px 45px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  text-align: center;
+}
+
+/* Título del formulario */
+h1 {
+  margin: 0;
+  font-size: 34px;
+  color: deepskyblue;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Icono del usuario encima del formulario */
+.user-icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto 20px auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Fila que agrupa dos campos del formulario (por ejemplo, nombre y apellido) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 10px;
+  /* Se elige grid en lugar de flex porque facilita mantener proporciones exactas */
+}
+
+/* Etiquetas de texto */
+label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Campos de entrada de datos */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Fila para los botones (Enviar y Cancelar) */
+.button-row {
+  display: grid; /* Se usa grid para mantener botones alineados en proporción */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+/* Estilo general de los botones */
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Botón de acceso/login (también usado como enlace estilizado) */
+.btn-login {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  background-color: #AEC6CF;
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: deepskyblue; /* Resalta al pasar el ratón */
+}
+
+/* Botón de cancelar */
+.btn-cancel {
+  background-color: #AEC6CF;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #df5252; /* Color rojo al pasar el ratón para indicar acción
+   destructiva */
+}
+
+/* Pie de página fijo con diseño simple */
+footer {
+  background-color: #80cee1;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 45px 0;
+  font-size: 14px;
+}

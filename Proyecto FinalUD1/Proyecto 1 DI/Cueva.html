@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+ <div class="main-image-container">
+  <img src="/Img/paisajeCueva.jpg"
+       alt="Cueva"
+       class="main-image">
+  <div class="destino-nombre">Cuevas</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+  <p>
+    Adéntrate en el misterioso mundo de las <strong>cuevas</strong>, donde la naturaleza ha esculpido verdaderas obras de arte bajo tierra. Este destino es ideal para los aventureros que buscan explorar lo desconocido y descubrir paisajes ocultos en las profundidades.
+  </p>
+<br>
+  <p>
+    <strong>Qué ver:</strong> contempla estalactitas y estalagmitas que forman columnas gigantes, ríos subterráneos y cámaras iluminadas por reflejos naturales. Cada cueva cuenta su propia historia, tallada por el agua y el tiempo.
+  </p>
+<br>
+  <p>
+    <strong>Qué hacer:</strong> realiza recorridos guiados por túneles naturales, practica espeleología o kayak subterráneo, y experimenta el silencio absoluto de las profundidades. Los más intrépidos pueden adentrarse en cuevas aún en exploración.
+  </p>
+<br>
+  <p>
+    <strong>Qué visitar:</strong> visita parques naturales, grutas con formaciones de cristales y cavernas que albergan pinturas rupestres. Algunas cuevas cuentan con espectáculos de luz y sonido que realzan su belleza.
+  </p>
+<br>
+  <p>
+    <strong>Actividades únicas:</strong> sumérgete en pozas de agua cristalina bajo tierra, asiste a conciertos en cavernas naturales o vive la experiencia de acampar dentro de una cueva iluminada solo por linternas. Una aventura fascinante y diferente.
+  </p>
+</div></div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+1. Partes que podrían controlarse mediante voz, gestos o sensores:
+
+Voz: Navegación entre secciones (Inicio, Destinos, Login), búsqueda de destinos específicos, control del carrusel de imágenes.
+
+Gestos: Desplazamiento de carrusel con deslizamientos de mano, selección de destinos con un gesto de “apuntar y tocar en el aire”.
+
+Sensores: Detectar proximidad para mostrar información contextual (por ejemplo, al acercar la mano a una imagen del destino, mostrar descripción o precio).
+
+2. Cambios de diseño para versión móvil táctil o basada en movimiento:
+
+Móvil táctil: Botones más grandes, diseño responsive para cuadrículas de destinos y carrusel táctil.
+
+Basada en movimiento: Íconos flotantes que respondan al movimiento del usuario, interacciones por “gesto de agarrar” para abrir menús y “deslizar” para avanzar imágenes.
+
+3. Respuesta visual o sonora de la interfaz:
+
+Visual: Animaciones al pasar el cursor o gesto sobre un destino, cambio de color de botones, indicadores de carga o selección.
+
+Sonora: Retroalimentación auditiva al seleccionar un destino, confirmación de login o añadir al carrito, sonido ambiental temático al abrir un destino (por ejemplo, olas en Caribe, viento en Montañas).

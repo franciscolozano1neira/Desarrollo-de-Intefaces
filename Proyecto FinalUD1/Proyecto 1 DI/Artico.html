@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+   <div class="main-image-container">
+  <img src="Img/paisajeArtico.jpg"
+       alt="paisajeArtico"
+       class="main-image">
+  <div class="destino-nombre">Ártico</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+        <p>
+      Bienvenido al <strong>Ártico</strong>, un destino tan majestuoso como extremo, donde la naturaleza muestra su lado más puro y sobrecogedor. Este rincón del planeta, cubierto de hielo y hogar de una fauna fascinante, te invita a descubrir un mundo de aventuras entre auroras boreales, glaciares infinitos y paisajes que parecen sacados de otro planeta.
+    </p>
+<br>
+    <p>
+      <strong>Qué ver:</strong> explora los fiordos noruegos, las vastas planicies heladas de Groenlandia o los impresionantes glaciares de Svalbard. Desde aquí podrás admirar las luces del norte —las famosas auroras boreales— bailando sobre el cielo polar, una experiencia que deja sin aliento.
+    </p>
+<br>
+    <p>
+      <strong>Qué hacer:</strong> embárcate en un crucero rompehielos, realiza excursiones en motos de nieve, disfruta de una caminata sobre glaciares o vive la emoción de observar osos polares, morsas y renos en su hábitat natural. Los más aventureros pueden incluso practicar kayak entre bloques de hielo o buceo polar bajo las aguas cristalinas.
+    </p>
+<br>
+    <p>
+      <strong>Qué visitar:</strong> conoce poblaciones inuit y aprende sobre sus tradiciones milenarias, prueba la gastronomía local basada en productos del mar, y visita estaciones científicas donde expertos estudian el clima y la vida en el círculo polar.
+    </p>
+<br>
+    <p>
+      <strong>Actividades únicas:</strong> pasa una noche en un iglú, disfruta de un paseo en trineo tirado por perros husky o contempla el sol de medianoche, un fenómeno que ilumina el horizonte durante las noches de verano. Cada momento en el Ártico es una experiencia inolvidable que combina serenidad, aventura y una conexión profunda con la naturaleza.
+    </p>
+  </div></div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

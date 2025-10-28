@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página en desarrollo</title>
+  <style>
+   body {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex; /* Usamos Flexbox para centrar contenido fácilmente  su uso es mas facil 
+  dado que solo es una linea sin nada mas en todo el html */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  background-color: #AEC6CF; /* Color de fondo agradable y consistente */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente legible y moderna */
+}
+
+p {
+  font-size: 25px; /* Texto grande y visible */
+  font-weight: bold; /* Texto destacado */
+  color: #333; /* Color oscuro para buena legibilidad */
+  transition: transform 1.5s; /* Transición suave para el efecto de rotación */
+  cursor: pointer; /* Indica que el elemento es interactivo */
+}
+
+p:hover {
+  transform: rotateY(360deg); /* Al pasar el cursor, el texto gira 360° en el eje Y */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Contenedor principal centrado vertical y horizontalmente usando Flexbox -->
+  <p>
+    <!-- Mensaje que indica que la página está en desarrollo; aplica efecto al 
+     pasar el ratón -->
+    Página en desarrollo — temporalmente fuera de servicio
+  </p>
+</html>

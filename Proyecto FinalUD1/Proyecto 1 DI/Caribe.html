@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- NOTA IMPORTANTE -->
+  <!-- Este es el único HTML que contiene comentarios detallados en cada sección. 
+       Los demás HTML del sitio siguen la misma estructura, solo cambian las imágenes 
+       y el texto de cada destino, por eso no necesitan comentarios repetitivos. -->
+
+  <!-- HEADER -->
+  <!-- Contenedor del encabezado con imagen de fondo y texto principal -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <!-- Barra de navegación principal con enlaces a otras páginas -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+      <a href="Login.html">
+        <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <!-- Imagen grande representativa del destino actual -->
+  <div class="main-image-container">
+  <img src="/Img/paisajeTropical.jpg" alt="Playa Caribeña" class="main-image">
+  <div class="destino-nombre">Caribe</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <!-- Sección con información detallada del destino -->
+  <div class="descripcion-sitio">
+    <p>
+      Bienvenido a nuestras <strong>playas tropicales</strong>, un paraíso de aguas turquesas, arenas blancas y una brisa cálida que invita al descanso absoluto. Este destino es ideal para quienes buscan desconectar del mundo y sumergirse en la tranquilidad del mar y el sol.
+    </p>
+    <br>
+    <p>
+      <strong>Qué ver:</strong> disfruta de impresionantes arrecifes de coral, cocoteros que bordean la costa y atardeceres que tiñen el horizonte con tonos dorados. Visita calas escondidas y miradores desde donde contemplar la inmensidad del océano.
+    </p>
+    <br>
+    <p>
+      <strong>Qué hacer:</strong> practica esnórquel o buceo entre peces de colores, da un paseo en kayak, navega en velero o prueba el surf en las olas del Pacífico. Para relajarte, nada como una sesión de masaje frente al mar o una caminata al atardecer por la orilla.
+    </p>
+    <br>
+    <p>
+      <strong>Qué visitar:</strong> descubre los pueblos costeros con su ambiente festivo, mercados de artesanías y restaurantes que sirven pescado fresco y frutas tropicales. No te pierdas los espectáculos locales de danza y música tradicional.
+    </p>
+    <br>
+    <p>
+      <strong>Actividades únicas:</strong> cena a la luz de las antorchas sobre la arena, haz una excursión en barco para ver delfines o simplemente relájate bajo una palmera disfrutando del sonido de las olas. Un viaje al paraíso, donde cada día es perfecto.
+    </p>
+  </div>
+
+  <!-- BOTÓN CARRITO -->
+  <!-- Botón para añadir este destino al carrito de compras -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <!-- Pie de página con información legal y derechos -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <!-- SCRIPT -->
+  <!-- Función para mostrar un mensaje temporal al añadir al carrito -->
+  <script>
+    function mostrarMensaje() {
+      // Selecciona el elemento del mensaje en el carrito
+      const mensaje = document.getElementById('mensajeCarrito');
+
+      // Muestra el mensaje cambiando su estilo a display block
+      mensaje.style.display = 'block';
+
+      // Después de 2 segundos, vuelve a ocultarlo con display none
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+
+</html>

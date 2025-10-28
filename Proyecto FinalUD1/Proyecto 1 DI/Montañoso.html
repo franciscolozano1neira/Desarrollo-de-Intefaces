@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <div class="main-image-container">
+  <img src="/Img/paisajeMontañoso.jpeg" alt="Paisaje Montañoso" class="main-image">
+  <div class="destino-nombre">Paisajes Montañosos</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+    <p>
+    Adéntrate en los <strong>paisajes montañosos</strong>, donde la tranquilidad, el aire puro y la majestuosidad de las alturas te invitan a desconectar y reconectarte contigo mismo. Las montañas ofrecen vistas espectaculares y una paz incomparable.
+  </p>
+<br>
+  <p>
+    <strong>Qué ver:</strong> picos nevados, valles verdes, lagos cristalinos y senderos rodeados de naturaleza. Desde los miradores más altos, las vistas son simplemente inolvidables.
+  </p>
+<br>
+  <p>
+    <strong>Qué hacer:</strong> realiza rutas de senderismo o ciclismo, practica escalada, esquí o snowboard según la temporada, o disfruta de un paseo en teleférico para admirar el paisaje desde las alturas.
+  </p>
+<br>
+  <p>
+    <strong>Qué visitar:</strong> pequeños pueblos de montaña, refugios alpinos y parques naturales llenos de flora y fauna local. Cada lugar guarda un encanto rústico y acogedor.
+  </p>
+<br>
+  <p>
+    <strong>Actividades únicas:</strong> contempla el amanecer entre las cumbres, cena junto a una chimenea o relájate en aguas termales rodeadas de nieve. La montaña es un refugio para el alma y una aventura para el cuerpo.
+  </p>
+</div> </div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

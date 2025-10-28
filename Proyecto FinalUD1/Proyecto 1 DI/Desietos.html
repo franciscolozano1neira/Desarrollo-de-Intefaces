@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <div class="main-image-container">
+  <img src="/Img/paisajeDesierto.jpg" alt="Desierto" class="main-image">
+  <div class="destino-nombre">Desierto</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+   <p>
+    Descubre la magia del <strong>desierto</strong>, un paisaje infinito de dunas doradas, cielos estrellados y una belleza silenciosa que te envuelve desde el primer momento. Este destino es ideal para quienes buscan calma, misterio y horizontes sin fin.
+  </p>
+<br>
+  <p>
+    <strong>Qué ver:</strong> dunas cambiantes con la luz del sol, oasis escondidos, formaciones rocosas milenarias y puestas de sol que tiñen el desierto de tonos rojos y dorados. De noche, el cielo revela millones de estrellas.
+  </p>
+<br>
+  <p>
+    <strong>Qué hacer:</strong> realiza excursiones en camello o 4x4, practica sandboard o vive la emoción de acampar en medio del desierto. También puedes disfrutar de cenas bajo las estrellas con música tradicional.
+  </p>
+<br>
+  <p>
+    <strong>Qué visitar:</strong> aldeas bereberes o beduinas, antiguos mercados de especias y fortalezas construidas en piedra. Cada rincón conserva la esencia de las culturas del desierto.
+  </p>
+<br>
+  <p>
+    <strong>Actividades únicas:</strong> contempla el amanecer desde las dunas, duerme en una haima tradicional o relájate junto a una fogata mientras escuchas historias locales. El desierto te conecta con la inmensidad y el silencio del mundo.
+  </p>
+</div></div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página 3 - SkyWorld Travel</title>
+  <link rel="stylesheet" href="Estilos/Pagina3.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="Img/montañas.jpg" alt="Imagen de viajes" class="header-img">
+    <div class="header-text">SkyWorld Travel</div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-container">
+      <a href="Inicio.html">Inicio</a>
+      <a href="Paginaendesarrollo.html">Vuelos</a>
+      <a href="Paginaendesarrollo.html">Barcos</a>
+      <a href="Paginaendesarrollo.html">Tren</a>
+      <a href="Paginaendesarrollo.html">Restaurantes</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Paginaendesarrollo.html">Sobre Nosotros</a>
+       <a href="Login.html"> 
+      <img class="usuario-img" src="Img/usuario.png" alt="Usuario">
+      </a>
+    </div>
+  </nav>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <div class="main-image-container">
+  <img src="/Img/PaisajeJungla.jpg" alt="Jungla" class="main-image">
+  <div class="destino-nombre">Jungla</div>
+</div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="descripcion-sitio">
+   <p>
+    Explora la <strong>jungla tropical</strong>, un ecosistema vibrante donde la vida florece en cada rincón. Este destino es perfecto para quienes buscan aventura, contacto con la naturaleza y una experiencia sensorial inolvidable.
+  </p>
+<br>
+  <p>
+    <strong>Qué ver:</strong> árboles gigantes cubiertos de lianas, cascadas escondidas, ríos serpenteantes y una increíble variedad de aves, mariposas y animales exóticos. La selva es un espectáculo de vida y color.
+  </p>
+<br>
+  <p>
+    <strong>Qué hacer:</strong> recorre senderos ecológicos, realiza excursiones en canoa o rafting, participa en tours de observación de fauna o vive la emoción de una tirolesa sobre la copa de los árboles.
+  </p>
+<br>
+  <p>
+    <strong>Qué visitar:</strong> comunidades indígenas que comparten su cultura ancestral, reservas naturales y parques nacionales. Algunos destinos ofrecen lodges ecológicos donde convivir en armonía con la naturaleza.
+  </p>
+<br>
+  <p>
+    <strong>Actividades únicas:</strong> duerme escuchando los sonidos de la selva, participa en caminatas nocturnas o nada en pozas naturales bajo la sombra de la vegetación. La jungla es pura energía, vida y aventura.
+  </p>
+</div> </div>
+
+  <!-- BOTÓN CARRITO -->
+  <div class="boton-contenedor">
+    <button class="add-to-cart-btn" onclick="mostrarMensaje()">+</button>
+    <div class="mensaje-carrito" id="mensajeCarrito">Sitio añadido al carrito</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 SkyWorld Travel · Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensajeCarrito');
+      mensaje.style.display = 'block';
+      setTimeout(() => {
+        mensaje.style.display = 'none';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
